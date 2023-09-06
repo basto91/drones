@@ -1,4 +1,4 @@
-package com.musala.drone.drone.configuration.security.authentication;
+package com.musala.drone.drone.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
