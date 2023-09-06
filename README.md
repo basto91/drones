@@ -46,16 +46,8 @@ To get started with the Drone Application, follow these steps:
    git clone git@github.com:basto91/drones.git
    cd drone
    
-### Docker deploy
-
-1. ```bash
-    mvn package
-   
 2. ```bash
-    sudo docker build -t drones .
-   
-3. ```bash
-    sudo docker-compose up -d .
+   ./gradlew bootRun
 
 
 
