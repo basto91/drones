@@ -1,8 +1,8 @@
 package com.musala.drone.drone.service;
 
 import com.musala.drone.drone.configuration.security.jwt.JwtProvider;
-import com.musala.drone.drone.service.model.AuthenticationRequest;
-import com.musala.drone.drone.service.model.AuthenticationResponse;
+import com.musala.drone.drone.service.dto.AuthenticationRequest;
+import com.musala.drone.drone.service.dto.AuthenticationResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
