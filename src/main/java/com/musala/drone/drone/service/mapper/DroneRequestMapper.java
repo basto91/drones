@@ -2,9 +2,11 @@ package com.musala.drone.drone.service.mapper;
 
 import com.musala.drone.drone.repository.entity.Drones;
 import com.musala.drone.drone.service.dto.DroneRequest;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class DroneRequestMapper implements Mapper<Drones, DroneRequest>{
 
     @Override
