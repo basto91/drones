@@ -2,10 +2,12 @@ package com.musala.drone.drone.service.mapper;
 
 import com.musala.drone.drone.repository.entity.Medication;
 import com.musala.drone.drone.service.dto.MedicationResponse;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class MedicationResponseMapper implements Mapper<Medication, MedicationResponse>{
 
     @Override

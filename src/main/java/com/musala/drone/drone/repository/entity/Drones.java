@@ -40,7 +40,7 @@ public class Drones  implements Serializable {
     @Enumerated(EnumType.STRING)
     private StateEnum stateEnum;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name="drone_id")
     private List<Medication> items;
 
