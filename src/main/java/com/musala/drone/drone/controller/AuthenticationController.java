@@ -2,8 +2,8 @@ package com.musala.drone.drone.controller;
 
 
 import com.musala.drone.drone.service.AuthenticationService;
-import com.musala.drone.drone.service.model.AuthenticationRequest;
-import com.musala.drone.drone.service.model.AuthenticationResponse;
+import com.musala.drone.drone.service.dto.AuthenticationRequest;
+import com.musala.drone.drone.service.dto.AuthenticationResponse;
 import com.musala.drone.drone.util.URIConstants;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
