@@ -14,7 +14,7 @@ import java.util.List;
 
 @Entity(name="drone")
 @Data
-@ToString
+@ToString(exclude = { "items" })
 @EqualsAndHashCode
 public class Drones  implements Serializable {
     @Id
@@ -27,6 +27,7 @@ public class Drones  implements Serializable {
     private String serialNumber;
 
     @Column(name = "model")
+    @Enumerated(EnumType.STRING)
     private ModelEnum modelEnum;
 
     @Column(name="weight")
@@ -36,6 +37,7 @@ public class Drones  implements Serializable {
     private int batteryCapacity;
 
     @Column(name="state")
+    @Enumerated(EnumType.STRING)
     private StateEnum stateEnum;
 
     @OneToMany
