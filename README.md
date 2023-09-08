@@ -48,6 +48,8 @@ To get started with the Drone Application, follow these steps:
    
 2. ```bash
    ./gradlew bootRun
+   
+Swagger url: http://localhost:8080/swagger-ui/index.html
 
 
 
