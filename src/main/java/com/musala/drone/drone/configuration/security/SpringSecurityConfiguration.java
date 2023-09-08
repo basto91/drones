@@ -32,7 +32,7 @@ public class SpringSecurityConfiguration {
         http.csrf().disable()
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/",
-                                "/api/v1/security/*", "/h2-console/*",
+                                "/api/v1/security/*", "/h2-console/**",
                                 "/swagger-ui/*","/v3/api-docs/*","/v3/api-docs")
                         .permitAll().anyRequest().authenticated());
 
