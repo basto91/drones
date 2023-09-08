@@ -13,7 +13,6 @@ public class MedicationRequestMapper  implements Mapper<Medication, MedicationRe
     @Override
     public MedicationRequest entityToObject(Medication entity) {
         return MedicationRequest.builder()
-                .image(entity.getImage())
                 .name(entity.getName())
                 .code(entity.getCode())
                 .weight(entity.getWeight())
@@ -22,7 +21,12 @@ public class MedicationRequestMapper  implements Mapper<Medication, MedicationRe
 
     @Override
     public Medication objectToEntity(MedicationRequest object) {
-        return null;
+        Medication medication = new Medication();
+        medication.setCode(object.getCode());
+        medication.setName(object.getName());
+        medication.setWeight(object.getWeight());
+        medication.setImage(object.getImage()!=null?object.getImage().getName():"");
+        return medication;
     }
 
     @Override

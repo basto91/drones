@@ -10,7 +10,7 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-@Entity(name="medication")
+@Entity
 @Data
 @ToString
 @EqualsAndHashCode
@@ -29,7 +29,7 @@ public class Medication implements Serializable {
     @Column(name = "weight")
     private long weight;
 
-    @Pattern(regexp = "^[A-Z0-9_]{11,15}$")
+    @Pattern(regexp = "^[A-Z0-9_]+$")
     @NotBlank(message = "Valid code is required")
     @Column(name = "code")
     private String code;
@@ -39,7 +39,7 @@ public class Medication implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "drone_id", insertable = false, updatable = false)
-    private Drones drones;
+    private Drone drone;
 
 
 }

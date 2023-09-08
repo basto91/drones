@@ -5,4 +5,5 @@ public class URIConstants {
     public static final String AUTHENTICATION_RESOURCE_PATH="/security";
     public static final String DRONE_RESOURCE_PATH="/drone";
     public static final String MEDICATION_RESOURCE_PATH="/medication";
+    public static final String FILES_RESOURCE_PATH="/files";
 }

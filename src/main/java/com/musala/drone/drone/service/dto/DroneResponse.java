@@ -18,4 +18,5 @@ public class DroneResponse {
     private int batteryCapacity;
     private StateEnum stateEnum;
     private List<MedicationResponse> medications;
+    private long id;
 }

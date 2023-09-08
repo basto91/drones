@@ -8,6 +8,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
 import lombok.Data;
+import org.hibernate.validator.constraints.Range;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class DroneRequest {
     @NotBlank
     private ModelEnum modelEnum;
     @NotBlank
+    @Range(min = 0, max = 500, message = "the max weight is 500")
     private long weight;
     @NotBlank
     private int batteryCapacity;

@@ -6,6 +6,7 @@ import com.musala.drone.drone.service.dto.*;
 import com.musala.drone.drone.util.URIConstants;
 import com.musala.drone.drone.util.exceptions.FullFleetException;
 import com.musala.drone.drone.util.exceptions.NotFoundException;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -30,7 +31,7 @@ public class DroneController {
     }
 
     @PatchMapping(value = "/{droneId}/load")
-    public ResponseEntity<DroneResponse> loadDroneWithMedication(@RequestParam("medicationIds") List<Long> medications,@PathVariable("drone_id") Long droneId) throws NotFoundException {
+    public ResponseEntity<DroneResponse> loadDroneWithMedication(@RequestParam("medicationIds") List<Long> medications,@PathVariable("droneId") Long droneId) throws NotFoundException {
         return ResponseEntity.ok(droneService.loadDroneWithMedication(medications,droneId));
     }
 
@@ -42,6 +43,10 @@ public class DroneController {
     @GetMapping(value="/available/{loadType}")
     public ResponseEntity<DroneAvailableResponse>getAvailableDrone(@PathVariable("loadType")ModelEnum loadType) throws NotFoundException {
         return ResponseEntity.ok(droneService.getAvailableDroneForLoad(loadType));
+    }
+    @GetMapping(value="/drones")
+    public ResponseEntity getPageDrones(Pageable pageable) throws NotFoundException {
+        return ResponseEntity.ok(droneService.getPageableDrone(pageable));
     }
     @GetMapping(value = "/{droneId}/battery")
     public ResponseEntity<DroneResponse>getDroneBatteryLevel(@PathVariable("droneId")Long droneId) throws NotFoundException {

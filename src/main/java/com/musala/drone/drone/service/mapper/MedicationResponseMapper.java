@@ -12,7 +12,7 @@ public class MedicationResponseMapper implements Mapper<Medication, MedicationRe
 
     @Override
     public MedicationResponse entityToObject(Medication entity) {
-        return MedicationResponse.builder().image(entity.getImage()).name(entity.getName()).code(entity.getCode()).build();
+        return MedicationResponse.builder().image(entity.getImage()).name(entity.getName()).code(entity.getCode()).weight(entity.getWeight()).id(entity.getId()).build();
     }
 
     @Override

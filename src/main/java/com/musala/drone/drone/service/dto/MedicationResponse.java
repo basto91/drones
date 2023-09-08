@@ -22,4 +22,6 @@ public class MedicationResponse {
     @NotBlank(message = "Valid code is required")
     private String code;
     private String image;
+
+    private long id;
 }
