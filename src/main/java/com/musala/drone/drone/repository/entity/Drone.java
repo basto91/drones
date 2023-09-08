@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 @ToString(exclude = { "items" })
 @EqualsAndHashCode
-public class Drones  implements Serializable {
+public class Drone implements Serializable {
     @Id
     @GeneratedValue
     @Column(name="drone_id")
